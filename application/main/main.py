@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 from .mqtt_connection.mqtt_client_connection import MqttClientConnection
 
-load_dotenv(dotenv_path="../configs/.env")
+load_dotenv()
 
 
 def start():
