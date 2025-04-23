@@ -22,12 +22,11 @@ class MqttClientConnection:
         self.__mqtt_client = mqtt_client
         self.__mqtt_client.loop_start()
 
-
-def end_connection(self):
-    try:
-        self.mqtt_client.loop_stop()
-        self.mqtt_client.disconnect()
-        return True
-    except Exception as e:
-        print(f"Error while disconnecting: {e}")
-        return False
+    def end_connection(self):
+        try:
+            self.__mqtt_client.loop_stop()
+            self.__mqtt_client.disconnect()
+            return True
+        except Exception as e:
+            print(f"Error while disconnecting: {e}")
+            return False
